@@ -1,0 +1,354 @@
+<div class="deferred">
+    <div id="dashboard-container" class="container-fluid hidden-xs hidden-sm visible-md-block visible-lg-block">
+
+        <!-- navigation -->
+        <div id="navigation-container" class="row">
+            <div class="col-sm-1 top-adjust"><img src="~/images/logo.png" alt="Marketing Dashboard" title="Marketing Dashboard" width="102" height="26" /></div>
+            <div class="col-sm-2 nav-label top-adjust text-right"><span>Select</span> Range</div>
+            <div class="col-sm-4 row top-adjust">
+                <button class="btn btn-default btn-xs" id="one-week-button">1 week</button>
+                <button class="btn btn-default btn-xs" id="one-month-button">1 month</button>
+                <button class="btn btn-default btn-xs" id="three-months-button">3 months</button>
+                <button class="btn btn-default btn-xs selected" id="one-year-button">1 year</button>
+            </div>
+            <div class="col-sm-5" id="range-container">
+                <div class="row">
+                    <div class="col-md-3 top-adjust">
+                        <div>range of days</div>
+                    </div>
+                    <div class="col-md-9 col-lg-8" id="pickers-container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="date" id="start-range-begin" />
+                                <input type="date" id="start-range-end" />
+                            </div>
+                            <div class="col-md-1 top-adjust"><div class="caps-muted">to</div></div>
+                            <div class="col-md-4">
+                                <input type="date" id="end-range-begin" />
+                                <input type="date" id="end-range-end" />
+                            </div>
+                            <div class="col-md-2 top-adjust"><button class="btn btn-default btn-xs" id="compare-button">Compare</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /navigation -->
+        <!-- highlight -->
+        <div id="highlight-container" class="row shadow">
+            <div class="col-md-3 col-lg-2 col-md-offset-1">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span class="trend-label title"> <span class="bold"> Current  </span> Trend</span>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="status-container"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 container" id="sessions-container">
+                <div class="row">
+                    <div class="col-md-2"><span class="direction fa fa-chevron-up"></span></div>
+                    <div class="col-md-8">
+                        <h2>Sessions</h2>
+                        <div class="percent-container"><span class="percent"></span>%</div>
+                        <div class="start-container"><span class="start"></span> PREVIOUS</div>
+                        <div class="end-container"><span class="end"></span> CURRENT</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 container" id="conversions-container">
+                <div class="row">
+                    <div class="col-md-2"><span class="direction fa fa-chevron-up"></span></div>
+                    <div class="col-md-8">
+                        <h2>Conversions</h2>
+                        <div class="value-container"><div class="percent-container"><span class="percent"></span>%</div></div>
+                        <div class="start-container"><span class="start"></span> PREVIOUS</div>
+                        <div class="end-container"><span class="end"></span> CURRENT</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 container" id="spend-container">
+                <div class="row">
+                    <div class="col-md-2"><span class="direction fa fa-chevron-up"></span></div>
+                    <div class="col-md-8">
+                        <h2>Spend</h2>
+                        <div class="percent-container"><span class="percent"></span>%</div>
+                        <div class="start-container"><span class="start"></span> PREVIOUS</div>
+                        <div class="end-container"><span class="end"></span> CURRENT</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 container" id="conversionCosts-container">
+                <div class="row">
+                    <div class="col-md-2"><span class="direction fa fa-chevron-up"></span></div>
+                    <div class="col-md-8">
+                        <h2>Conversion Costs</h2>
+                        <div class="percent-container"><span class="percent"></span>%</div>
+                        <div class="start-container"><span class="start"></span> PREVIOUS</div>
+                        <div class="end-container"><span class="end"></span> CURRENT</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /highlight -->
+
+        <div class="row">
+            <div id="charts-container" class="col-md-9 col-lg-10">
+
+                <!-- health-chart  -->
+                <div class="row">
+                    <div class="col-md-8 col-lg-9">
+                        <h2>Overall Health</h2>
+                    </div>
+                    <div id="chart-view-buttons" class="col-md-4 col-lg-3 buttons">
+                        <button class="btn btn-default btn-xs btn-bordered selected" id="all-button">All</button>
+                        <button class="btn btn-default btn-xs btn-bordered" id="medium-button">By Medium</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="chart-container"></div>
+                        <div id="chart-legend"></div>
+                    </div>
+                </div>
+                <!-- /health-chart -->
+
+
+                <div class="row border-top">
+                    <div class="col-md-6">
+                        <h2>Sessions by Region</h2>
+                        <div id="map-container"></div>
+                        <div class="row clear">
+                            <div class="col-md-3">
+                                <button class="btn btn-default btn-xs btn-bordered" id="map-play">Play</button>
+                            </div>
+                            <div class="col-md-9 row">
+                                <div class="col-md-2 progress-start caps-muted">
+                                    START
+                                </div>
+                                <div class="col-md-8">
+                                    <div id="map-progress"></div>
+                                </div>
+                                <div class="col-md-2 progress-end caps-muted">
+                                    END
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row border-top-light traffic-summary">
+                            <div class="col-md-3" id="users-container">
+                                <h2>Users</h2>
+                                <div class="value-container"><span class="value"></span></div>
+                            </div>
+                            <div class="col-md-4 border-left-light" id="conversionRate-container">
+                                <h2>Conversion Rate</h2>
+                                <div class="value-container"><span class="value"></span>%</div>
+                            </div>
+                            <div class="col-md-5 border-left-light" id="topPages-container">
+                                <h2>Top Pages</h2>
+                                <div class="value"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="health-container" class="col-md-6 border-left">
+                        <h2>Campaign Health</h2>
+                        <div class="row health">
+                            <div class="col-md-5" id="doughnut-container">
+                                <div class="end"></div>
+                                <div class="start"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div id="conversions-highlight"></div>
+                                <div class="row row-labels">
+                                    <div class="col-md-6">
+                                        <div class="lbl-container" id="ppc-label"><div class="code"></div><div class="value">PPC</div></div>
+                                        <div class="lbl-container" id="email-label"><div class="code"></div><div class="value">Email</div></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="lbl-container" id="banners-label"><div class="code"></div><div class="value">Banners</div></div>
+                                        <div class="lbl-container" id="thirdParty-label"><div class="code"></div><div class="value">3rd Party</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="conversions-label">CONVERSIONS</div>
+                        <div id="target-label">TARGET</div>
+                        <div class="row bulletgraphs">
+                            <div class="col-md-6">
+                                <div id="ppc-container">
+                                    <div class="end"></div>
+                                    <div class="start"></div>
+                                </div>
+                                <div id="email-container">
+                                    <div class="end"></div>
+                                    <div class="start"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div id="banners-container">
+                                    <div class="end"></div>
+                                    <div class="start"></div>
+                                </div>
+                                <div id="thirdParty-container">
+                                    <div class="end"></div>
+                                    <div class="start"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="stats-container" class="col-md-3 col-lg-2">
+                <div class="row" id="referringDomains-container">
+                    <div class="col-md-1">
+                        <span class="direction fa fa-chevron-up"></span>
+                    </div>
+                    <div class="col-md-8">
+                        <h2>Referring Domains</h2>
+                        <div class="percent-container"><span class="percent"></span>%</div>
+                        <div class="start-container"><span class="start"></span> START</div>
+                        <div class="end-container"><span class="end"></span> END</div>
+                    </div>
+                </div>
+                <div id="brandedSearches-container" class="row">
+                    <div class="col-md-1">
+                        <span class="direction fa fa-chevron-up"></span>
+                    </div>
+                    <div class="col-md-8">
+                        <h2>Branded Searches</h2>
+                        <div class="percent-container"><span class="percent"></span>%</div>
+                        <div class="start-container"><span class="start"></span> START</div>
+                        <div class="end-container"><span class="end"></span> END</div>
+                    </div>
+                </div>
+
+                <div id="onlineSales-container" class="row">
+                    <div class="col-md-1">
+                        <span class="direction fa fa-chevron-up"></span>
+                    </div>
+                    <div class="col-md-8">
+                        <h2>Online Sales</h2>
+                        <div class="percent-container"><span class="percent"></span>%</div>
+                        <div class="start-container"><span class="start"></span> START</div>
+                        <div class="end-container"><span class="end"></span> END</div>
+                    </div>
+                </div>
+
+                <div id="socialTrend-container" class="row">
+                    <div class="col-md-1">
+                        <span class="direction fa fa-chevron-up"></span>
+                    </div>
+                    <div class="col-md-8">
+                        <h2>Social Trend</h2>
+                        <div class="percent-container"><span class="percent"></span>%</div>
+                        <div class="start-container"><span class="start"></span> START</div>
+                        <div class="end-container"><span class="end"></span> END</div>
+                    </div>
+                </div>
+                <div id="keywords-container">
+                    <h2>Top Unbranded Keywords</h2>
+                    <div class="startValue"></div>
+                    <div class="endValue"></div>
+                </div>
+
+                <div id="question-container"><i class="fa fa-question-circle"></i></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="unsupported-container" class="container-fluid visible-xs-block visible-sm-block hidden-md hidden-lg">
+
+    <div class="row">
+        <div class="col-sm-3 text-center"><i class="fa fa-exclamation-triangle"></i></div>
+        <div class="col-sm-8">
+            <p class="lead">This dashboard is unsupported on small devices.</p>
+            Much data awaits you! Please switch to a larger screen to see the dashboard in
+            all its glory.
+        </div>
+    </div>
+
+</div>
+
+<div id="random-data-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Welcome to the Marketing Dashboard!</h4>
+            </div>
+            <div class="modal-body">
+                <p class="alert alert-info">
+                    As you use this dashboard please keep in mind a
+                    few things...
+                </p>
+                <h2>About the Data</h2>
+                <p>
+                    In order to make this sample easy to download and install,
+                    all the data for this application is random for
+                    each date range. Therefore, as you navigate around the
+                    site you will encounter different values even as you
+                    select identical date ranges.
+                </p>
+
+                <h2>About the Bar Chart</h2>
+                <p>
+                    <img src="~/images/chart.png" class="img-thumbnail" />
+                    The bar chart uses a logarithmic scale on the Y axis in order show
+                    two sets of data that vary in amounts. Notice how conversions (relatively
+                    small numbers in green) are plotted on the chart at the bottom where the scale
+                    starts at 1 and increases to 100. The sessions (relatively large numbers in yellow)
+                    are plotted at the top of the chart where the scale goes quickly from
+                    1,000 to 10,000. This approach allows two data sets of varying scale to exist in a
+                    stacked layout on the chart.
+                </p>
+                <p class="clear"></p>
+            </div>
+            <div class="modal-footer">
+                <button id="hide-random-data-modal"
+                        type="button"
+                        class="btn btn-primary modal-button"
+                        data-dismiss="modal">
+                    Got it!
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="error-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Oops...</h4>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button id="hide-random-data-modal"
+                        type="button"
+                        class="btn btn-primary modal-button"
+                        data-dismiss="modal">
+                    OK
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section styles {
+    <link rel="stylesheet" href="~/igniteui/css/themes/darkly/infragistics.theme.css" />
+    <link rel="stylesheet" href="~/igniteui/css/structure/infragistics.css" />
+}
+
+@section scripts {
+
+    <script src="~/igniteui/infragistics.js"></script>
+
+    <script src="~/scripts/app/utils.js"></script>
+    <script type="text/javascript"> app.utils.rootUrl = "@Url.Content("~/")";</script>
+    <script src="~/scripts/app/dataService.js"></script>
+    <script src="~/scripts/app/selectors.js"></script>
+    <script src="~/scripts/app/renderingService.js"></script>
+    <script src="~/scripts/app/viewModel.js"></script>
+}
