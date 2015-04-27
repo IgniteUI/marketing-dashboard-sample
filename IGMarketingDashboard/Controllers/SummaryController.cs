@@ -17,10 +17,10 @@ namespace IGMarketingDashboard.Controllers
 
             bool _continue = true;
 
-            if (!DateTime.TryParse(startRangeBegin, out startRangeBeginDate)) _continue = false;
-            if (!DateTime.TryParse(startRangeEnd, out startRangeEndDate)) _continue = false;
-            if (!DateTime.TryParse(endRangeBegin, out endRangeBeginDate)) _continue = false;
-            if (!DateTime.TryParse(endRangeEnd, out endRangeEndDate)) _continue = false;
+            if (!DateTime.TryParse(startRangeBegin, null, System.Globalization.DateTimeStyles.AdjustToUniversal, out startRangeBeginDate)) _continue = false;
+            if (!DateTime.TryParse(startRangeEnd, null, System.Globalization.DateTimeStyles.AdjustToUniversal, out startRangeEndDate)) _continue = false;
+            if (!DateTime.TryParse(endRangeBegin, null, System.Globalization.DateTimeStyles.AdjustToUniversal, out endRangeBeginDate)) _continue = false;
+            if (!DateTime.TryParse(endRangeEnd, null, System.Globalization.DateTimeStyles.AdjustToUniversal, out endRangeEndDate)) _continue = false;
 
             IList<SummaryModel> models = new List<SummaryModel>();
 

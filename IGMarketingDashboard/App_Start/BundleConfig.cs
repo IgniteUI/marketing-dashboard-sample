@@ -30,7 +30,6 @@ namespace IGMarketingDashboard
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css", new CssRewriteUrlTransform())
-                      .Include("~/Content/font-awesome.css", new CssRewriteUrlTransform())
                       .Include("~/Content/site.css", new CssRewriteUrlTransform()));
         }
     }

@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Alert_info" xml:space="preserve">
+    <value>ダッシュボードの使用について</value>
+  </data>
+  <data name="Alert_Paragraph_BarChart" xml:space="preserve">
+    <value>棒チャートは、2 つのデータ セットを表示するために Y 軸で対数目盛を使用します。コンバージョン (緑色で比較的少数) はチャートの下部にプロットされます。スケールの範囲は 1 ~ 100 です。セッション (黄色で比較的多数) はチャートの上部にプロットされます。スケールが 1,000 から 10,000 へすばやく変わります。この方法を使用すると、集合形式チャートで別のスケールを持つデータ セットと共に表示できます。</value>
+  </data>
+  <data name="Alert_Paragraph_Data" xml:space="preserve">
+    <value>サンプルを簡単にダウンロードしてインストールするには、このアプリケーションのすべてのデータは日付範囲によってランダムに生成されます。同じ日付範囲を選択しても別の値が作成されます。</value>
+  </data>
+  <data name="Alert_Text_Title_BarChart" xml:space="preserve">
+    <value>棒チャートについて</value>
+  </data>
+  <data name="Alert_Text_Title_Data" xml:space="preserve">
+    <value>データについて</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>すべて</value>
+  </data>
+  <data name="Banners" xml:space="preserve">
+    <value>バナー</value>
+  </data>
+  <data name="Branded_Searches" xml:space="preserve">
+    <value>ブランド検索</value>
+  </data>
+  <data name="By_Medium" xml:space="preserve">
+    <value>メディア別</value>
+  </data>
+  <data name="Campaign_Health" xml:space="preserve">
+    <value>キャンペーンの状況</value>
+  </data>
+  <data name="Compare" xml:space="preserve">
+    <value>比較</value>
+  </data>
+  <data name="Confirm_button" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="Conversions" xml:space="preserve">
+    <value>コンバージョン</value>
+  </data>
+  <data name="Conversion_Costs" xml:space="preserve">
+    <value>コンバージョン単価</value>
+  </data>
+  <data name="Conversion_Rate" xml:space="preserve">
+    <value>コンバージョン レート</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>現在</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>メール</value>
+  </data>
+  <data name="End" xml:space="preserve">
+    <value>終了</value>
+  </data>
+  <data name="Error_Message" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="Error_Message_Button" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="One_month" xml:space="preserve">
+    <value>1 か月</value>
+  </data>
+  <data name="One_week" xml:space="preserve">
+    <value>1 週間</value>
+  </data>
+  <data name="One_year" xml:space="preserve">
+    <value>1 年間</value>
+  </data>
+  <data name="Online_Sales" xml:space="preserve">
+    <value>オンライン セールス</value>
+  </data>
+  <data name="Overall_Health" xml:space="preserve">
+    <value>パフォーマンス概要</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>再生</value>
+  </data>
+  <data name="PPC" xml:space="preserve">
+    <value>PPC</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>前回</value>
+  </data>
+  <data name="Range_of_days" xml:space="preserve">
+    <value>日付範囲</value>
+  </data>
+  <data name="Referring_Domains" xml:space="preserve">
+    <value>参照元ドメイン</value>
+  </data>
+  <data name="Select_Range" xml:space="preserve">
+    <value>範囲の選択</value>
+  </data>
+  <data name="Sessions" xml:space="preserve">
+    <value>セッション</value>
+  </data>
+  <data name="Sessions_by_Region" xml:space="preserve">
+    <value>地域別セッション</value>
+  </data>
+  <data name="Social_Trend" xml:space="preserve">
+    <value>ソーシャル トレンド</value>
+  </data>
+  <data name="Spend" xml:space="preserve">
+    <value>支出</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>開始</value>
+  </data>
+  <data name="Support_Text" xml:space="preserve">
+    <value>&lt;p class="lead"&gt;このダッシュボードは、コンパクトサイズのデバイスではサポートされていません。&lt;/p&gt;より大きい画面でダッシュボードを表示してください。</value>
+  </data>
+  <data name="Target" xml:space="preserve">
+    <value>対象</value>
+  </data>
+  <data name="Third_Party" xml:space="preserve">
+    <value>サードパーティー</value>
+  </data>
+  <data name="Three_months" xml:space="preserve">
+    <value>3 か月</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>～</value>
+  </data>
+  <data name="Top_Pages" xml:space="preserve">
+    <value>閲覧頻度の高いページ</value>
+  </data>
+  <data name="Top_Unbranded_Keywords" xml:space="preserve">
+    <value>一般キーワード</value>
+  </data>
+  <data name="Trend" xml:space="preserve">
+    <value>トレンド</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>ユーザー</value>
+  </data>
+  <data name="Welcome_message" xml:space="preserve">
+    <value>マーケティング ダッシュボード</value>
+  </data>
+  <data name="Top_Pages_List" xml:space="preserve">
+    <value>get-to-your-work, the-solution-is-dashboards, ios-controls-help, top-5-UX-projects, make-the-time, if-you-build-it-they-will-come, marketing-projects-with-roi, top-resources-for seo, 10-events-you-must-attend, top-five-reasons-to-buy, 3-secrets-to-building-loyalty, why-customers-are-wrong, ceo-interview, from-red-to-black-in-one-quarter, monthly-sales-goals, summer-extravaganza, unfortunate-turn-of-events, my-iphone-is-my-computer, 7-deadly-assumptions, what-our-customers-wont-say, why-we-love-our-customers, the-smell-of-success, if-henry-ford-was-in-charge, how-we-can-do-better, 11-ways-to-say-yes, the-pointy-haired-boss, the-opening-farewell, luck-doesnt-close-deals, all-your-base-are-belong-to-us</value>
+  </data>
+  <data name="Top_Unbranded_Keywords_List" xml:space="preserve">
+    <value> プレス リリース, メディア, マーケティング ROI, SEO, チェック リスト, オンライン マーケティング, オフィス マネージメント, オンライン支払ソリューション, オンライン ストア, 半導体, ショッピング カート ソリューション, ソフトウェア, スタートアップ, 技術, 転送, 仮想サーバー ホスト, web デザイン, web 開発, web ホスト, 業株製品, 政府と交換, 食品飲料, オフィス製品, バイオテック</value>
+  </data>
+  <data name="Australia" xml:space="preserve">
+    <value>オーストラリア</value>
+  </data>
+  <data name="Brasil" xml:space="preserve">
+    <value>ブラジル</value>
+  </data>
+  <data name="Bulgaria" xml:space="preserve">
+    <value>ブルガリア</value>
+  </data>
+  <data name="China" xml:space="preserve">
+    <value>中国</value>
+  </data>
+  <data name="England" xml:space="preserve">
+    <value>イギリス</value>
+  </data>
+  <data name="Germany" xml:space="preserve">
+    <value>ドイツ</value>
+  </data>
+  <data name="India" xml:space="preserve">
+    <value>インド</value>
+  </data>
+  <data name="Japan" xml:space="preserve">
+    <value>日本</value>
+  </data>
+  <data name="Mexico" xml:space="preserve">
+    <value>メキシコ</value>
+  </data>
+  <data name="Philippines" xml:space="preserve">
+    <value>フィリピン</value>
+  </data>
+  <data name="Poland" xml:space="preserve">
+    <value>ポーランド</value>
+  </data>
+  <data name="Russia" xml:space="preserve">
+    <value>ロシア</value>
+  </data>
+  <data name="South_Korea" xml:space="preserve">
+    <value>韓国</value>
+  </data>
+  <data name="United_States" xml:space="preserve">
+    <value>米国</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>{0} 日目</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>{0} か月目</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>{0} 週目</value>
+  </data>
+  <data name="Current_Trend" xml:space="preserve">
+    <value>&lt;span class="bold center-block"&gt;現在の&lt;/span&gt;トレンド</value>
+  </data>
+</root>

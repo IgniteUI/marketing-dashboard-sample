@@ -25,7 +25,7 @@
                     deferred.resolve(data);
 
             }).fail(function (error) {
-                deferred.reject('The beginning and end date ranges must have an equal number of days.');
+                deferred.reject(Resources.Error);
             });
 
             return deferred.promise;

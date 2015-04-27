@@ -14,3 +14,5 @@
 /// <reference path="app/viewmodel.js" />
 /// <reference path="../igniteui/infragistics.js" />
 /// <reference path="app/utils.js" />
+/// <reference path="../igniteui/infragistics.ui.regional-ja.js" />
+/// <reference path="../igniteui/infragistics-ja.js" />

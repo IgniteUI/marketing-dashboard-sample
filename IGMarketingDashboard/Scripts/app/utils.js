@@ -11,11 +11,11 @@
         rootUrl: '/',
 
         chartMediumBrushes: {
-            organic: '#77B40D',
-            paid: '#A9D120',
-            direct: '#CCE575',
-            referral: '#E1EEB5',
-            email: '#FFFFFF'
+            organic: { title: Resources.Organic, color: '#77B40D' },
+            paid: { title: Resources.Paid, color: '#A9D120' },
+            direct: { title: Resources.Direct, color: '#CCE575' },
+            referral: { title: Resources.Referral, color: '#E1EEB5' },
+            email: { title: Resources.Email, color: '#FFFFFF' }
         },
 
         areaSeriesOptions: function () {
@@ -28,18 +28,18 @@
                     xAxis: 'time',
                     yAxis: 'stats',
                     type: 'area',
-                    title: medium.toUpperCase(),
-                    outline: this.chartMediumBrushes[medium],
+                    title: this.chartMediumBrushes[medium].title.toUpperCase(),
+                    outline: this.chartMediumBrushes[medium].color,
                     transitionDuration: 800,
                     isTransitionInEnabled: true,
                     showTooltip: true,
                     tooltipTemplate: counter > 0 ? '' : '' +
                         '<div class="chart-tooltip"> ' +
                         '   <div class="item bold">${item.title}</div>' +
-                        '   <div><span class="caps-muted">Sessions:</span> ${item.session}</div>' +
-                        '   <div><span class="caps-muted">Conversions:</span> ${item.conversion}</div>' +
+                        '   <div><span class="caps-muted">' + Resources.Session + ':</span> ${item.session}</div>' +
+                        '   <div><span class="caps-muted">' + Resources.Conversions + ':</span> ${item.conversion}</div>' +
                         '</div>',
-                    brush: this.chartMediumBrushes[medium],
+                    brush: this.chartMediumBrushes[medium].color,
                     areaFillOpacity: 0.5
                 });
                 counter++;
@@ -53,22 +53,22 @@
                 name: 'sessions',
                 xAxis: 'time',
                 valueMemberPath: 'session',
-                title: 'Sessions',
+                title: Resources.Session,
                 brush: '#ffff33',
                 outline: '#ffff33',
                 tooltipTemplate: '<div class="chart-tooltip"> ' +
                                  '  <div class="item bold">${item.title}</div>' +
-                                 '  <div><span class="caps-muted">Sessions:</span> ${item.session}</div>' +
+                                 '  <div><span class="caps-muted">' + Resources.Session + ':</span> ${item.session}</div>' +
                                  '</div>'
             }, {
                 name: 'conversion',
                 xAxis: 'timeConvers',
                 valueMemberPath: 'conversion',
-                title: 'Conversions',
+                title: Resources.Conversions,
                 brush: '#66cc00',
                 outline: '#66cc00',
                 tooltipTemplate: '<div class="chart-tooltip"> ' +
-                                 '  <div><span class="caps-muted">Conversions:</span> ${item.conversion}</div>' +
+                                 '  <div><span class="caps-muted">' + Resources.Conversions + ':</span> ${item.conversion}</div>' +
                                  '</div>'
             },
 
@@ -77,24 +77,24 @@
                 name: 'sessionsPrev',
                 xAxis: 'time',
                 valueMemberPath: 'session',
-                title: 'Prev. Sessions',
+                title: Resources.PrevSession,
                 brush: '#655F00',
                 outline: '#655F00',
                 tooltipTemplate: '' +
                     ' <div class="chart-tooltip"> ' +
-                    '   <div class="item caps-muted">Prev. Sessions: ${item.session}</div>' +
+                    '   <div class="item caps-muted">' + Resources.PrevSession + ': ${item.session}</div>' +
                     '</div>'
             },
             {
                 name: 'conversionPrev',
                 xAxis: 'timeConvers',
                 valueMemberPath: 'conversion',
-                title: 'Prev. Conversions',
+                title: Resources.PrevConversions,
                 brush: '#295001',
                 outline: '#295001',
                 tooltipTemplate: '' +
                     '<div class="chart-tooltip"> ' +
-                    '   <div class="caps-muted">Prev. Conversions: ${item.conversion}</div>' +
+                    '   <div class="caps-muted">' + Resources.PrevConversions + ': ${item.conversion}</div>' +
                     '</div>'
             }];
 
@@ -145,8 +145,9 @@
             return range;
         },
 
-        getDateString: function (date){
-            return (date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear();
+        getDateString: function (date) {
+            // IE 10 and below don't create proper format 
+            return date.toUTCString().replace('UTC', 'GMT');
         },
 
         convertToInt: function (string) {

@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Alert_info" xml:space="preserve">
+    <value>As you use this dashboard please keep in mind a few things...</value>
+  </data>
+  <data name="Alert_Paragraph_BarChart" xml:space="preserve">
+    <value>The bar chart uses a logarithmic scale on the Y axis in order show two sets of data that vary in amounts. Notice how conversions (relatively small numbers in green) are plotted on the chart at the bottom where the scale starts at 1 and increases to 100. The sessions (relatively large numbers in yellow) are plotted at the top of the chart where the scale goes quickly from 1,000 to 10,000. This approach allows two data sets of varying scale to exist in a stacked layout on the chart.</value>
+  </data>
+  <data name="Alert_Paragraph_Data" xml:space="preserve">
+    <value>In order to make this sample easy to download and install, all the data for this application is random for each date range. Therefore, as you navigate around the site you will encounter different values even as you select identical date ranges.</value>
+  </data>
+  <data name="Alert_Text_Title_BarChart" xml:space="preserve">
+    <value>About the Bar Chart</value>
+  </data>
+  <data name="Alert_Text_Title_Data" xml:space="preserve">
+    <value>About the Data</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Banners" xml:space="preserve">
+    <value>Banners</value>
+  </data>
+  <data name="Branded_Searches" xml:space="preserve">
+    <value>Branded Searches</value>
+  </data>
+  <data name="By_Medium" xml:space="preserve">
+    <value>By Medium</value>
+  </data>
+  <data name="Campaign_Health" xml:space="preserve">
+    <value>Campaign Health</value>
+  </data>
+  <data name="Compare" xml:space="preserve">
+    <value>COMPARE</value>
+  </data>
+  <data name="Confirm_button" xml:space="preserve">
+    <value>Got it!</value>
+  </data>
+  <data name="Conversions" xml:space="preserve">
+    <value>CONVERSIONS</value>
+  </data>
+  <data name="Conversion_Costs" xml:space="preserve">
+    <value>Conversion Costs</value>
+  </data>
+  <data name="Conversion_Rate" xml:space="preserve">
+    <value>Conversion Rate</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>CURRENT</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="End" xml:space="preserve">
+    <value>END</value>
+  </data>
+  <data name="Error_Message" xml:space="preserve">
+    <value>Oops...</value>
+  </data>
+  <data name="Error_Message_Button" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="One_month" xml:space="preserve">
+    <value>1 month</value>
+  </data>
+  <data name="One_week" xml:space="preserve">
+    <value>1 week</value>
+  </data>
+  <data name="One_year" xml:space="preserve">
+    <value>1 year</value>
+  </data>
+  <data name="Online_Sales" xml:space="preserve">
+    <value>Online Sales</value>
+  </data>
+  <data name="Overall_Health" xml:space="preserve">
+    <value>Overall Health</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="PPC" xml:space="preserve">
+    <value>PPC</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>PREVIOUS</value>
+  </data>
+  <data name="Range_of_days" xml:space="preserve">
+    <value>range of days</value>
+  </data>
+  <data name="Referring_Domains" xml:space="preserve">
+    <value>Referring Domains</value>
+  </data>
+  <data name="Select_Range" xml:space="preserve">
+    <value>&lt;span&gt;Select&lt;/span&gt; Range</value>
+  </data>
+  <data name="Sessions" xml:space="preserve">
+    <value>Sessions</value>
+  </data>
+  <data name="Sessions_by_Region" xml:space="preserve">
+    <value>Sessions by Region</value>
+  </data>
+  <data name="Social_Trend" xml:space="preserve">
+    <value>Social Trend</value>
+  </data>
+  <data name="Spend" xml:space="preserve">
+    <value>Spend</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>START</value>
+  </data>
+  <data name="Support_Text" xml:space="preserve">
+    <value>&lt;p class="lead"&gt;This dashboard is unsupported on small devices.&lt;/p&gt; Much data awaits you! Please switch to a larger screen to see the dashboard in all its glory.</value>
+  </data>
+  <data name="Target" xml:space="preserve">
+    <value>TARGET</value>
+  </data>
+  <data name="Third_Party" xml:space="preserve">
+    <value>3rd Party</value>
+  </data>
+  <data name="Three_months" xml:space="preserve">
+    <value>3 months</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>TO</value>
+  </data>
+  <data name="Top_Pages" xml:space="preserve">
+    <value>Top Pages</value>
+  </data>
+  <data name="Top_Unbranded_Keywords" xml:space="preserve">
+    <value>Top Unbranded Keywords</value>
+  </data>
+  <data name="Current_Trend" xml:space="preserve">
+    <value>&lt;span class="bold center-block"&gt; Current&lt;/span&gt; Trend</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="Welcome_message" xml:space="preserve">
+    <value>Welcome to the Marketing Dashboard!</value>
+  </data>
+  <data name="Top_Pages_List" xml:space="preserve">
+    <value>get-to-your-work, the-solution-is-dashboards, ios-controls-help, top-5-UX-projects, make-the-time, if-you-build-it-they-will-come, marketing-projects-with-roi, top-resources-for seo, 10-events-you-must-attend, top-five-reasons-to-buy, 3-secrets-to-building-loyalty, why-customers-are-wrong, ceo-interview, from-red-to-black-in-one-quarter, monthly-sales-goals, summer-extravaganza, unfortunate-turn-of-events, my-iphone-is-my-computer, 7-deadly-assumptions, what-our-customers-wont-say, why-we-love-our-customers, the-smell-of-success, if-henry-ford-was-in-charge, how-we-can-do-better, 11-ways-to-say-yes, the-pointy-haired-boss, the-opening-farewell, luck-doesnt-close-deals, all-your-base-are-belong-to-us</value>
+  </data>
+  <data name="Top_Unbranded_Keywords_List" xml:space="preserve">
+    <value>press releases, media coverage, marketing ROI, SEO checklist, online marketing , office management, online payment solutions , online stores, semiconductors, shopping cart solutions, software , startup, technology, transportation, virtual server hosting, web design, web development , web hosting, industrial goods, government and trade, food and beverage, office supplies, biotechnology</value>
+  </data>
+  <data name="Australia" xml:space="preserve">
+    <value>Australia</value>
+  </data>
+  <data name="Brasil" xml:space="preserve">
+    <value>Brasil</value>
+  </data>
+  <data name="Bulgaria" xml:space="preserve">
+    <value>Bulgaria</value>
+  </data>
+  <data name="China" xml:space="preserve">
+    <value>China</value>
+  </data>
+  <data name="England" xml:space="preserve">
+    <value>England</value>
+  </data>
+  <data name="Germany" xml:space="preserve">
+    <value>Germany</value>
+  </data>
+  <data name="India" xml:space="preserve">
+    <value>India</value>
+  </data>
+  <data name="Japan" xml:space="preserve">
+    <value>Japan</value>
+  </data>
+  <data name="Mexico" xml:space="preserve">
+    <value>Mexico</value>
+  </data>
+  <data name="Philippines" xml:space="preserve">
+    <value>Philippines</value>
+  </data>
+  <data name="Poland" xml:space="preserve">
+    <value>Poland</value>
+  </data>
+  <data name="Russia" xml:space="preserve">
+    <value>Russia</value>
+  </data>
+  <data name="South_Korea" xml:space="preserve">
+    <value>South Korea</value>
+  </data>
+  <data name="United_States" xml:space="preserve">
+    <value>United States</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Day {0}</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Month {0}</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>Week {0}</value>
+  </data>
+</root>

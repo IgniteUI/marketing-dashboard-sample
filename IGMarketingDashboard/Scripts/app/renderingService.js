@@ -73,9 +73,9 @@
             if (!rootElement) rootElement = '<ul>';
             $container.html('');
             var root = $(rootElement);
-            list.forEach(function (item) {
-                root.append('<li>' + item + '</li>')
-            });
+            for (var i = 0; i < list.length; i++) {
+                root.append('<li>' + list[i] + '</li>');
+            }
             $container.append(root);
         },
 
@@ -303,6 +303,7 @@
         datePicker: function ($container) {
             $container.igDatePicker({
                 width: 80,
+                regional: Resources.Regional,
                 textAlign : "center",
                 focusOnDropDownOpen: false,
                 dropDownOnReadOnly: true,

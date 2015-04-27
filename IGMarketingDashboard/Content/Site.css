@@ -444,6 +444,16 @@ ol li {
   padding: 12px 0 12px 0;
   cursor: pointer;
 }
+#question-container span.question-circle {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  background-color: #969595;
+  border-radius: 10px;
+  color: #453f4e;
+  text-align: center;
+}
 .traffic-summary {
   margin-top: 20px;
 }

@@ -24,9 +24,9 @@
             app.data = data;
 
             app.data.mapCurrent = $.extend(true, { current: 0 }, data.end.trafficStats[0]);
-            dataPoints.forEach(function (dataPoint) {
-                app.render.startEnd(dataPoint.name, data, dataPoint.invertStyleRule);
-            });
+            for (var i = 0; i < dataPoints.length; i++) {
+                app.render.startEnd(dataPoints[i].name, data, dataPoints[i].invertStyleRule);
+            }
 
             app.render.value('users', 'end', data);
             app.render.value('conversionRate', 'end', data);
@@ -161,7 +161,7 @@
             // */
 
             app.render.map(app.data.mapCurrent, data.end.trafficStats.length - 1, $('#map-container'));
-            buttons.map.text(" play ");
+            buttons.map.text(Resources.Play);
 
             app.render.chart(data, $('#chart-container'));
 
@@ -330,7 +330,7 @@
 
             if (interval) {
                 interval = window.clearInterval(interval);
-                buttons.map.text('play').removeClass('selected');
+                buttons.map.text(Resources.Play).removeClass('selected');
                 return;
             }
 
@@ -342,7 +342,7 @@
                 updateMapData(app.data.end.trafficStats[app.data.mapCurrent.current].perLocation);
             }, 1000);
 
-            buttons.map.text('pause').addClass('selected');
+            buttons.map.text(Resources.Pause).addClass('selected');
         });
 
         buttons.hideRandomDataModal.click(function () {

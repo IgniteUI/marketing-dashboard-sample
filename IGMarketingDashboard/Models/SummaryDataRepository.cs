@@ -140,14 +140,15 @@ namespace IGMarketingDashboard.Models
 
         public string[] GetWordList()
         {
-            string[] words = new string[] { "press releases", "media coverage", "marketing ROI", "SEO checklist", "online marketing ", "office management", "online payment solutions ", "online stores", "semiconductors", "shopping cart solutions", "software ", "startup", "technology", "transportation", "virtual server hosting", "web design", "web development ", "web hosting", "industrial goods", "government and trade", "food and beverage", "office supplies", "biotechnology" };
+            string[] words = Resources.Main.Top_Unbranded_Keywords_List.Split(',');
             return GetUniqueList(words, 10);
         }
 
         public string[] GetPageList()
         {
-            string[] pages = new string[] { "get-to-your-work", "the-solution-is-dashboards", "ios-controls-help", "top-5-UX-projects", "make-the-time", "if-you-build-it-they-will-come", "marketing-projects-with-roi", "top-resources-for seo", "10-events-you-must-attend", "top-five-reasons-to-buy", "3-secrets-to-building-loyalty", "why-customers-are-wrong", "ceo-interview", "from-red-to-black-in-one-quarter", "monthly-sales-goals", "summer-extravaganza", "unfortunate-turn-of-events", "my-iphone-is-my-computer", "7-deadly-assumptions", "what-our-customers-wont-say", "why-we-love-our-customers", "the-smell-of-success", "if-henry-ford-was-in-charge", "how-we-can-do-better", "11-ways-to-say-yes", "the-pointy-haired-boss", "the-opening-farewell", "luck-doesnt-close-deals", "all-your-base-are-belong-to-us" };
+            string[] pages = Resources.Main.Top_Pages_List.Split(',');
             return GetUniqueList(pages, 4);
+            
         }
 
         public CampaignData GetCampaignData(decimal conversions)
@@ -194,23 +195,23 @@ namespace IGMarketingDashboard.Models
 
             if (this._numberOfDays == 7)
             {
-                label = "Day";
+                label = Resources.Main.Day;
                 divisor = 7;
                 mapScale = 5;
             }
             else if (this._numberOfDays > 7 && this._numberOfDays <= 31)
             {
-                label = "Week";
+                label = Resources.Main.Week;
                 divisor = 4;
             }
             else if (this._numberOfDays > 31 && this._numberOfDays <= 90)
             {
-                label = "Week";
+                label = Resources.Main.Week;
                 divisor = 12;
             }
             else
             {
-                label = "Month";
+                label = Resources.Main.Month;
                 divisor = this._numberOfDays / 30;
                 mapScale = 200;
             }
@@ -220,7 +221,7 @@ namespace IGMarketingDashboard.Models
             for (int i = 0; i < stats.Count; i++)
             {
                 // label items in order after shuffle
-                stats[i].title = string.Format("{0} {1}", label, (i+1));
+                stats[i].title = string.Format(label, (i+1));
 
                 DistributeSessions(stats[i].session, stats[i].conversion, Locations.Count, stats[i].perLocation);
                 for (int j = 0; j < stats[i].perLocation.Count; j++)
@@ -295,23 +296,23 @@ namespace IGMarketingDashboard.Models
             stats.Shuffle();
         }
 
-        private static List<Location> Locations = new List<Location> {
-            new Location(  "Poland",  52.21,  21 ),
-            new Location(  "England",  51.50,  0.12 ),
-            new Location(  "Germany",  52.50,  13.33 ),
-            new Location(  "Russia",  55.75,  37.51 ),
-            new Location(  "Australia",  -33.83,  151.2 ),
-            new Location(  "Japan",  35.6895,  139.6917 ),
-            new Location(  "South Korea",  37.5665,  126.9780 ),
-            new Location(  "India",  28.6353,  77.2250 ),
-            new Location(  "India",  19.0177,  72.8562 ),
-            new Location(  "Philippines",  14.6010,  120.9762 ),
-            new Location(  "China",  31.2244,  121.4759 ),
-            new Location(  "Mexico",  19.4270,  -99.1276 ),
-            new Location(  "United States",  40.7561,  -73.9870 ),
-            new Location(  "Brasil",  -23.5489,  -46.6388 ),
-            new Location(  "United States",  34.0522,  -118.2434 ),
-            new Location(  "Bulgaria",  42.697845,  23.321925 ),
+        private List<Location> Locations = new List<Location> {
+            new Location(  Resources.Main.Poland,  52.21,  21 ),
+            new Location(  Resources.Main.England,  51.50,  0.12 ),
+            new Location(  Resources.Main.Germany,  52.50,  13.33 ),
+            new Location(  Resources.Main.Russia,  55.75,  37.51 ),
+            new Location(  Resources.Main.Australia,  -33.83,  151.2 ),
+            new Location(  Resources.Main.Japan,  35.6895,  139.6917 ),
+            new Location(  Resources.Main.South_Korea,  37.5665,  126.9780 ),
+            new Location(  Resources.Main.India,  28.6353,  77.2250 ),
+            new Location(  Resources.Main.India,  19.0177,  72.8562 ),
+            new Location(  Resources.Main.Philippines,  14.6010,  120.9762 ),
+            new Location(  Resources.Main.China,  31.2244,  121.4759 ),
+            new Location(  Resources.Main.Mexico,  19.4270,  -99.1276 ),
+            new Location(  Resources.Main.United_States,  40.7561,  -73.9870 ),
+            new Location(  Resources.Main.Brasil,  -23.5489,  -46.6388 ),
+            new Location(  Resources.Main.United_States,  34.0522,  -118.2434 ),
+            new Location(  Resources.Main.Bulgaria,  42.697845,  23.321925 )
         };
 
         private static string[] Mediums = new string[] { "organic", "paid", "direct", "referral", "email" };
